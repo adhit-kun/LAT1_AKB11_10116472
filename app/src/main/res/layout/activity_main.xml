@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+NIM     : 10116472
+Nama    : Adhitya Kuncoro Jatti
+Kelas   : IF-11 / AKB-11
+Tanggal : 06-April-2019
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- sebagai pembatas garis -->
+    <RelativeLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- agar bisa ditumpuk -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_get_start_timitory"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/Hitam"
+                android:text="@string/main1"
+                android:fontFamily="@font/nunito_bold"/>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="0.5"
+        android:background="@drawable/kustom_border">
+
+        <Button
+            android:id="@+id/btnMulai"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/main2"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="@drawable/tombol_gradient_rounded_corner" />
+    </RelativeLayout>
+
+</LinearLayout>
