@@ -24,6 +24,33 @@ public class Biodata extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biodata);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_biodata);
+        edtNama = (EditText) findViewById(R.id.edtNama);
+        edtUmur = (EditText) findViewById(R.id.edtUmur);
+        btnNext = (Button) findViewById(R.id.btnSelanjutnya);
 
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = edtNama.getText().toString();
+                String umur = edtUmur.getText().toString();
+
+                boolean isEmptyFields = false;
+
+                if (TextUtils.isEmpty(nama)) {
+                    isEmptyFields = true;
+                    edtNama.setError("Harap isi dengan nama kamu!");
+                } else {
+                    Intent moveIntentWithData = new Intent(Biodata.this, hai.class);
+                    moveIntentWithData.putExtra(KEYNAME, nama);
+                    startActivity(moveIntentWithData);
+                }
+                if (TextUtils.isEmpty(umur)) {
+                    isEmptyFields = true;
+                    edtUmur.setError("Harap isi dengan umur kamu!");
+                }
+            }
+        });
     }
 }
